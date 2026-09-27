@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Suhana Soni — Mathematics and Computing student building AI, ML and software solutions.">
+  <title>Suhana Soni | Mathematics & Computing | AI • ML • Software</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#08090c;--panel:#111318;--panel2:#171922;--text:#f4f5f7;--muted:#a7abb5;--line:#272b35;--accent:#b8ff5c;--accent2:#8bd83e}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:"DM Sans",sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    nav{position:sticky;top:0;z-index:10;background:rgba(8,9,12,.84);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+    nav .inner{height:70px;display:flex;align-items:center;justify-content:space-between}
+    .logo{font-family:"Space Grotesk";font-weight:700;font-size:20px}.logo span{color:var(--accent)}
+    .links{display:flex;gap:26px;color:var(--muted);font-size:14px}.links a:hover{color:var(--text)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:11px 17px;border:1px solid var(--line);border-radius:10px;font-weight:600;font-size:14px;transition:.2s}
+    .btn.primary{background:var(--accent);color:#0b0d08;border-color:var(--accent)}.btn:hover{transform:translateY(-2px)}
+    .hero{padding:105px 0 80px;display:grid;grid-template-columns:1.3fr .7fr;gap:70px;align-items:center}
+    .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:12px}
+    h1,h2,h3{font-family:"Space Grotesk",sans-serif;line-height:1.08;margin:0}
+    h1{font-size:clamp(48px,7vw,82px);letter-spacing:-.055em;margin:16px 0 22px}
+    h1 em{font-style:normal;color:var(--accent)}
+    .hero p{color:var(--muted);font-size:18px;max-width:690px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .availability{margin-top:24px;color:#d7d9df;font-size:14px}.dot{display:inline-block;width:8px;height:8px;background:var(--accent);border-radius:50%;margin-right:8px}
+    .hero-card{border:1px solid var(--line);background:linear-gradient(145deg,#151820,#0d0f13);border-radius:22px;padding:28px;box-shadow:0 20px 70px #0005}
+    .hero-card .mark{height:160px;border:1px solid var(--line);border-radius:16px;display:grid;place-items:center;font:700 70px "Space Grotesk";color:var(--accent);margin-bottom:22px}
+    .mini-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.mini{padding:14px;background:var(--panel2);border-radius:12px}.mini b{display:block;font-size:21px}.mini span{color:var(--muted);font-size:12px}
+    section{padding:82px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:34px}
+    .section-head h2{font-size:42px;letter-spacing:-.04em}.section-head p{color:var(--muted);max-width:500px;margin:0}
+    .about{display:grid;grid-template-columns:1fr 1fr;gap:50px}.about p{color:var(--muted);font-size:17px}.facts{display:grid;gap:12px}
+    .fact{border:1px solid var(--line);padding:18px;border-radius:14px;background:var(--panel)}.fact small{color:var(--muted);display:block;margin-bottom:4px}
+    .project-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;display:flex;flex-direction:column;min-height:330px}
+    .project.featured{border-color:#3e5226;background:linear-gradient(145deg,#151a13,#101218)}
+    .tagrow{display:flex;gap:7px;flex-wrap:wrap;margin:18px 0}.tag{font-size:12px;padding:6px 9px;border:1px solid var(--line);border-radius:999px;color:#d5d7dc}
+    .project h3{font-size:25px}.project p{color:var(--muted);font-size:15px}.project .bottom{margin-top:auto;padding-top:18px;color:var(--accent);font-size:13px;font-weight:700}
+    .experience{display:grid;gap:14px}.exp{display:grid;grid-template-columns:170px 1fr;gap:28px;padding:24px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}
+    .exp .date{color:var(--muted);font-size:13px}.exp h3{font-size:22px;margin-bottom:5px}.exp p{margin:0;color:var(--muted)}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.skillbox{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:22px}.skillbox h3{font-size:18px;margin-bottom:12px}.skillbox p{color:var(--muted);margin:0}
+    .education{display:grid;grid-template-columns:1fr 1fr;gap:18px}.edu{padding:25px;border:1px solid var(--line);border-radius:16px;background:var(--panel)}.edu .degree{font-size:20px;font-family:"Space Grotesk";font-weight:700}.edu p{color:var(--muted);margin:7px 0}
+    .contact{background:linear-gradient(135deg,#12170e,#0d1015);border:1px solid #344322;border-radius:22px;padding:45px;display:flex;justify-content:space-between;align-items:center;gap:30px}.contact p{color:var(--muted);max-width:620px}
+    footer{padding:28px 0;color:var(--muted);font-size:13px;display:flex;justify-content:space-between}
+    @media(max-width:800px){.hero,.about,.education{grid-template-columns:1fr}.hero{padding-top:70px}.project-grid,.skills{grid-template-columns:1fr}.links{display:none}.section-head{display:block}.section-head p{margin-top:12px}.exp{grid-template-columns:1fr;gap:10px}.contact{display:block}.contact .actions{margin-top:20px}}
+  </style>
+</head>
+<body>
+<nav><div class="container inner">
+  <a class="logo" href="#">SUHANA<span>.</span></a>
+  <div class="links"><a href="#work">Work</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <a class="btn primary" href="#contact">Let's connect</a>
+</div></nav>
+
+<header class="container hero">
+  <div>
+    <div class="eyebrow">Mathematics & Computing • IGDTUW</div>
+    <h1>Building things at the intersection of <em>AI, software & creativity.</em></h1>
+    <p>I'm Suhana Soni, a second-year B.Tech Mathematics and Computing student interested in AI/ML, software engineering and product-oriented problem solving. I like turning messy problems into systems that are understandable, useful and practical.</p>
+    <div class="actions">
+      <a class="btn primary" href="#work">View my work ↓</a>
+      <a class="btn" href="mailto:suhanasoni2007@gmail.com">Email me</a>
+    </div>
+    <div class="availability"><span class="dot"></span>Open to internship opportunities in software, AI/ML, data and product-oriented technical roles.</div>
+  </div>
+  <div class="hero-card">
+    <div class="mark">SS</div>
+    <div class="mini-grid">
+      <div class="mini"><b>147</b><span>DSA problems solved</span></div>
+      <div class="mini"><b>AI/ML</b><span>Hands-on learning & projects</span></div>
+      <div class="mini"><b>SIH</b><span>SIF-SHIELD project</span></div>
+      <div class="mini"><b>∞</b><span>Curiosity to build</span></div>
+    </div>
+  </div>
+</header>
+
+<section id="about"><div class="container">
+  <div class="section-head"><h2>Who I am</h2><p>A technical student who is still exploring — but already building.</p></div>
+  <div class="about">
+    <div>
+      <p>I’m pursuing Mathematics and Computing at Indira Gandhi Delhi Technical University for Women. My current focus is strengthening computer science fundamentals while building practical experience in AI/ML and software development.</p>
+      <p>What I bring is a combination of analytical thinking, hands-on experimentation and communication. I enjoy understanding not only whether a model or algorithm works, but also why it works and how it can become part of a useful product.</p>
+      <p>Outside pure coding, I’ve worked in college coordination and event responsibilities, which has helped me become more comfortable with collaboration, ownership and working with different people.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><small>Education</small><b>B.Tech — Mathematics & Computing</b><br>IGDTUW</div>
+      <div class="fact"><small>Current focus</small><b>147 DSA Problems • CS Fundamentals • AI/ML • Software</b></div>
+      <div class="fact"><small>Also exploring</small><b>UI/UX • Product thinking • Creative technology</b></div>
+      <div class="fact"><small>Based in</small><b>Delhi, India</b></div>
+    </div>
+  </div>
+</div></section>
+
+<section id="work"><div class="container">
+  <div class="section-head"><h2>Selected work</h2><p>Projects chosen because they show how I think, learn and solve problems — not just what tools I have used.</p></div>
+  <div class="project-grid">
+    <article class="project featured">
+      <div class="eyebrow">Smart India Hackathon • Featured</div>
+      <h3>SIF-SHIELD</h3>
+      <p>An AI/NLP-based early-warning intelligence platform for identifying Serious Injury & Fatality precursors in Oil India’s unsafe-act, unsafe-condition and near-miss reports.</p>
+      <div class="tagrow"><span class="tag">AI/NLP</span><span class="tag">Text Analysis</span><span class="tag">Risk Intelligence</span><span class="tag">Product Design</span></div>
+      <div class="bottom">From near-miss reports → prevention intelligence ↗</div>
+    </article>
+    <article class="project">
+      <div class="eyebrow">Hashhacks • Web Application</div>
+      <h3>Complaint System</h3>
+      <p>A TypeScript-based complaint-system project from Hashhacks, developed as a practical web application and maintained in my GitHub project repository.</p>
+      <div class="tagrow"><span class="tag">TypeScript</span><span class="tag">CSS</span><span class="tag">PL/pgSQL</span><span class="tag">Web Development</span></div>
+      <a class="bottom" href="https://github.com/suhanaxsoni/Complaint-System-Hashhacks" target="_blank" rel="noopener">View project on GitHub ↗</a>
+    </article>
+    <article class="project">
+      <div class="eyebrow">AI / ML</div>
+      <h3>Machine Learning Practice</h3>
+      <p>Hands-on learning through supervised learning concepts including Linear Regression and K-Nearest Neighbors, while building understanding of the relationship between AI, ML and deep learning.</p>
+      <div class="tagrow"><span class="tag">Python</span><span class="tag">Machine Learning</span><span class="tag">Linear Regression</span><span class="tag">KNN</span></div>
+      <div class="bottom">Learning by implementing, not memorising ↗</div>
+    </article>
+    <article class="project">
+      <div class="eyebrow">Software / DSA • TakeUForward</div>
+      <h3>DSA Problem Solving — 147 Problems</h3>
+      <p>Currently at 147/1406 problems on TakeUForward, with focused practice across Arrays (68), Linked List (35), Stack & Queues (29), Recursion & Backtracking (16), Bit Manipulation (14) and Binary Search (13).</p>
+      <div class="tagrow"><span class="tag">C++</span><span class="tag">STL</span><span class="tag">Arrays</span><span class="tag">Linked List</span><span class="tag">Stacks & Queues</span></div>
+      <a class="bottom" href="https://takeuforward.org/profile/suhanaxsoni" target="_blank" rel="noopener">View TakeUForward profile ↗</a>
+    </article>
+    <article class="project">
+      <div class="eyebrow">Web / Product</div>
+      <h3>Personal Portfolio</h3>
+      <p>Designed and developed a personal portfolio website to present technical work, learning progress and experiences in a recruiter-friendly format.</p>
+      <div class="tagrow"><span class="tag">Web Development</span><span class="tag">UI</span><span class="tag">Portfolio</span></div>
+      <div class="bottom">Designing for clarity and impact ↗</div>
+    </article>
+    <article class="project">
+      <div class="eyebrow">Embedded Systems</div>
+      <h3>8051 / NuMicro Experiments</h3>
+      <p>Worked with microcontroller development concepts including ports, LEDs and embedded C using Keil/Nuvoton tooling, gaining exposure to hardware-software interaction.</p>
+      <div class="tagrow"><span class="tag">Embedded C</span><span class="tag">8051</span><span class="tag">NuMicro</span><span class="tag">Keil</span></div>
+      <div class="bottom">Understanding systems beyond software ↗</div>
+    </article>
+    <article class="project">
+      <div class="eyebrow">Data / Statistics</div>
+      <h3>Statistics & ML with R</h3>
+      <p>Explored statistical and machine-learning workflows in R, including data handling, visualisation and classification-oriented work using the Breast Cancer Wisconsin dataset.</p>
+      <div class="tagrow"><span class="tag">R</span><span class="tag">dplyr</span><span class="tag">ggplot2</span><span class="tag">Data Analysis</span></div>
+      <div class="bottom">Connecting statistics with ML ↗</div>
+    </article>
+  </div>
+</div></section>
+
+<section id="experience"><div class="container">
+  <div class="section-head"><h2>Experience & leadership</h2><p>Experiences that demonstrate ownership, collaboration and communication alongside technical growth.</p></div>
+  <div class="experience">
+    <div class="exp"><div class="date">2026 • Ongoing</div><div><h3>AI/ML Internship Experience</h3><p>Working through practical machine-learning concepts and implementations, including Linear Regression and KNN, while developing a stronger foundation in AI/ML workflows.</p></div></div>
+    <div class="exp"><div class="date">2026</div><div><h3>Smart India Hackathon — SIF-SHIELD</h3><p>Contributing to a team building an AI/NLP safety-intelligence solution for Oil India Limited, with emphasis on extracting actionable prevention insights from unstructured safety reports.</p></div></div>
+    <div class="exp"><div class="date">College • 2026</div><div><h3>Ignite IGDTUW — Sponsorship Coordinator</h3><p>Supported the sports fest as a sponsorship coordinator and handled chess-event coordination involving contestants and arbitrators.</p></div></div>
+    <div class="exp"><div class="date">College • 2026</div><div><h3>Training & Placement Coordination</h3><p>Engaged with placement-related student coordination, communication and discussions around access to internship and placement information.</p></div></div>
+  </div>
+</div></section>
+
+<section id="skills"><div class="container">
+  <div class="section-head"><h2>Skills</h2><p>A practical stack I’m actively strengthening rather than a list of technologies I’ve only touched once.</p></div>
+  <div class="skills">
+    <div class="skillbox"><h3>Programming</h3><p>C++ • C • Python • R</p></div>
+    <div class="skillbox"><h3>CS Fundamentals</h3><p>DSA • OOP • Data Structures • Algorithms • Problem Solving</p></div>
+    <div class="skillbox"><h3>AI / Data</h3><p>Machine Learning • NLP concepts • Data Analysis • Statistics • ggplot2 • dplyr</p></div>
+    <div class="skillbox"><h3>Development</h3><p>HTML • CSS • JavaScript • TypeScript • Vite • Git/GitHub</p></div>
+    <div class="skillbox"><h3>Embedded</h3><p>Embedded C • 8051 • NuMicro • Keil</p></div>
+    <div class="skillbox"><h3>Creative / Product</h3><p>UI/UX • Visual Design • Presentation • Product Thinking</p></div>
+  </div>
+</div></section>
+
+<section><div class="container">
+  <div class="section-head"><h2>Education</h2><p>Currently building the fundamentals that support long-term technical depth.</p></div>
+  <div class="education">
+    <div class="edu"><div class="degree">B.Tech — Mathematics & Computing</div><p>Indira Gandhi Delhi Technical University for Women (IGDTUW)</p><p>Second year • 2026</p></div>
+    <div class="edu"><div class="degree">Academic direction</div><p>Mathematics + computing gives me a foundation across quantitative reasoning, algorithms, programming and data-driven problem solving.</p></div>
+  </div>
+</div></section>
+
+<section id="contact"><div class="container">
+  <div class="contact">
+    <div><div class="eyebrow">Let’s build something</div><h2 style="font-size:38px;margin-top:10px">Looking for an internship where I can learn fast and contribute seriously.</h2><p>If you’re working on software, AI/ML, data or technology products, I’d love to connect and discuss where I can contribute.</p></div>
+    <div class="actions">
+      <a class="btn primary" href="mailto:suhanasoni2007@gmail.com">Email me</a>
+      <a class="btn" href="https://www.linkedin.com/in/suhana-soni-30bb3735b/" target="_blank">LinkedIn ↗</a>
+      <a class="btn" href="https://github.com/suhanaxsoni" target="_blank">GitHub ↗</a>
+    </div>
+  </div>
+</div></section>
+
+<footer class="container"><span>© 2026 Suhana Soni</span><span>Built with curiosity + code.</span></footer>
+</body>
+</html>
